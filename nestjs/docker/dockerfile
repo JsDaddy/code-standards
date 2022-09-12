@@ -1,0 +1,7 @@
+FROM node:16.9.1-alpine3.14
+WORKDIR /base
+COPY package.json .
+RUN npm install 
+COPY . .
+EXPOSE 3000
+CMD [ "sh", "-c", "npm run typeorm:run && npm run start:debug" ]
