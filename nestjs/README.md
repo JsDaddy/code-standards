@@ -32,8 +32,10 @@ In this file you can add any scripts what you want
 ## Configure database
 
 1. Run **npm install --save @nestjs/typeorm typeorm postgres pg**
-1. Copy the entire contents of the folder [./src/database/](./src/database/)
-2. Add TypeOrmModule to [./src/app.module.ts](./src/app.module.ts) like in the example
+2. Copy the entire contents of the folder [./src/database/](./src/database/)
+3. Add TypeOrmModule to [./src/app.module.ts](./src/app.module.ts) like in the example
+4. Add all typeorm commands to [.package.json](.package.json)
+
 
 ## Configure docker
 
