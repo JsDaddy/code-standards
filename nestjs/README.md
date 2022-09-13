@@ -5,14 +5,14 @@ At the start a new project follow the next steps:
 ## Configure ESLint and Prettier
 
 1. Run **npm install prettier eslint-plugin-prettier eslint-config-prettier eslint --save-dev**
-2. Copy [.prettierrc.json](.prettierrc.json) file to your project to root folder
-3. Copy [.eslintrc.json](.eslintrc.json) file to your project to root folder
+2. Copy [./prettierrc.json](./prettierrc.json) file to your project to root folder
+3. Copy [./eslintrc.json](./eslintrc.json) file to your project to root folder
 4. Add script - **"lint": "eslint \"{src,apps,libs,test}/\**/*.ts\" --fix"** to [.package.json](.package.json)
 
 ## Configure husky pre-commit
 
 1. Run **npm install husky --save-dev**
-2. Add script - **"prepare": "husky install"** to [.package.json](.package.json)
+2. Add script - **"prepare": "husky install"** to [./package.json](./package.json)
 3. Run **npm run prepare** after that will be created .husky folder in root project
 4. Run **npx husky add .husky/pre-commit "npm lint"** after that will be created file pre-commit in .husky folder.
 In this file you can add any scripts what you want
@@ -21,8 +21,7 @@ In this file you can add any scripts what you want
 
 1. Run **npm i --save @nestjs/config**
 2. Add ConfigModule to [./src/app.module.ts](./src/app.module.ts) like in the example
-3. Copy [.env](.env) file to your project to root folder and change the secret data to yours
-
+3. Copy [./.env](./.env) file to your project to root folder and change the secret data to yours
 ## Configure swagger
 
 1. Run **npm install --save @nestjs/swagger**
@@ -34,12 +33,12 @@ In this file you can add any scripts what you want
 1. Run **npm install --save @nestjs/typeorm typeorm postgres pg**
 2. Copy the entire contents of the folder [./src/database/](./src/database/)
 3. Add TypeOrmModule to [./src/app.module.ts](./src/app.module.ts) like in the example
-4. Add all typeorm commands to [.package.json](.package.json)
+4. Add all typeorm commands to [./package.json](./package.json)
 
 
 ## Configure docker
 
-1. Copy [.docker-compose.yaml.json](.docker-compose.yaml.json) file to your project to root folder
+1. Copy [./docker-compose.yaml.json](./docker-compose.yaml.json) file to your project to root folder
 2. Copy the entire contents of the folder [./docker/](./docker/)
-3. Copy [.init.sh](.init.sh) file to your project to root folder
+3. Copy [./init.sh](./init.sh) file to your project to root folder
 4. Start docker with command **COMPOSE_HTTP_TIMEOUT=300 docker-compose --env-file=.env -f docker-compose.yaml up -d --build**
