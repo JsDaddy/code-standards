@@ -40,5 +40,5 @@ In this file you can add any scripts what you want
 
 1. Copy [./docker-compose.yaml](./docker-compose.yaml) file to your project to root folder
 2. Copy the entire contents of the folder [./docker/](./docker/)
-3. Copy [./init.sh](./init.sh) file to your project to root folder
+3. Copy [./init.sh](./init.sh) file to your project to root folder and specify the data that you defined in [./.env](./.env) file
 4. Start docker with command ```COMPOSE_HTTP_TIMEOUT=300 docker-compose --env-file=.env -f docker-compose.yaml up -d --build```
