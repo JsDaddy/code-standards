@@ -1,0 +1,14 @@
+- structure your project by components
+- use secure configuration with environment variables - flavors [flutter_flavorizr](https://pub.dev/packages/flutter_flavorizr)
+- properly separate dependencies between 'dependencies' and 'dev_dependencies' in pubspec.yaml
+- stick to the principles of DRY and KISS
+- use unit tests for critical logic
+- use [dio](https://pub.dev/packages/dio) for https calls
+- use [get](https://pub.dev/packages/get). It combines high-performance state management, intelligent dependency injection, and route management quickly and practically.
+- use [bot_toast](https://pub.dev/packages/bot_toast) flutter toast!
+- use [shared_preferences](https://pub.dev/packages/shared_preferences) for localstorage
+- use [lint](https://pub.dev/packages/lint) for liniting your code
+- use [import_sorter](https://pub.dev/packages/import_sorter) for sort your imports in project
+- if you need local db in your project use [hive](https://pub.dev/packages/hive)
+- use [mockito](https://pub.dev/packages/mockito) for mocking data for your unit tests
+- use [json_serializable](https://pub.dev/packages/json_serializable) for generating to/from JSON code for a class
