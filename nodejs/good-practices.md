@@ -1,0 +1,11 @@
+- structure your project by components
+- use secure configuration with environment variables
+- properly separate dependencies between 'dependencies' and 'devDependencies' in package.json
+- use swagger for design and document your APIs at scale
+- use docker for DB containers and other parts of your application so other users don't have problems running the application
+- use typeorm for working with DB 
+- use migrations when you working with DB because it unsafe to use synchronize: true for schema synchronization on production once you get data in your database
+- use class-validator for validation
+- use class-transformer to tranfsorm plain object to some instance plain class and versa. Also it allows to serialize/deserialize object based on criteria.
+- stick to the principles of DRY and KISS
+- use unit tests for critical logic
