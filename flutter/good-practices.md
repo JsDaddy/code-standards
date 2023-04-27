@@ -8,6 +8,7 @@
 - use [bot_toast](https://pub.dev/packages/bot_toast) flutter toast!
 - use [shared_preferences](https://pub.dev/packages/shared_preferences) for localstorage
 - use [lint](https://pub.dev/packages/lint) for liniting your code
+- use [dart_code_metrics](https://pub.dev/packages/dart_code_metrics) for running metrics
 - use [import_sorter](https://pub.dev/packages/import_sorter) for sort your imports in project
 - if you need local db in your project use [hive](https://pub.dev/packages/hive)
 - use [mockito](https://pub.dev/packages/mockito) for mocking data for your unit tests
