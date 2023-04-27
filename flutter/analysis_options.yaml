@@ -112,3 +112,13 @@ linter:
     - use_rethrow_when_possible
     - valid_regexps
     - void_checks
+
+dart_code_metrics:
+  metrics:
+    cyclomatic-complexity: 20
+    lines-of-code: 500
+    maximum-nesting-level: 3
+    number-of-parameters: 4
+    source-lines-of-code: 200
+  metrics-exclude:
+    - test/**
