@@ -3,6 +3,8 @@ analyzer:
   language:
     strict-casts: false
     strict-raw-types: false
+  plugins:
+    - custom_lint
   errors:
     todo: ignore
     invalid_annotation_target: ignore
@@ -13,6 +15,11 @@ analyzer:
     - "lib/src/http/**"
     - "**/*.g.dart"
     - "**/*.freezed.dart"
+
+custom_lint:
+  enable_all_lint_rules: false
+  rules:
+    - file_naming_kebab_case
 
 linter:
   rules:
