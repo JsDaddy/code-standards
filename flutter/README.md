@@ -11,9 +11,10 @@ To start a new project with the specified coding standards, follow these steps:
          url: https://github.com/JsDaddy/dart-linter-rules
    ```
 
-2. **Add `commitlint_cli` to your `pubspec.yaml` file:**
+2. **Add `commitlint_cli` and `flutter_lints` to your `pubspec.yaml` file:**
 
    - [commitlint_cli](https://pub.dev/packages/commitlint_cli)
+   - [flutter_lints](https://pub.dev/packages/flutter_lints)
 
 3. **Copy Configuration Files:**
 
