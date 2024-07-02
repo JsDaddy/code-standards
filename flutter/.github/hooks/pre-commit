@@ -30,6 +30,17 @@ fi
 printf "\e[33;1m%s\e[0m\n" 'Finished running Flutter import sorter'
 printf '%s\n' "${avar}"
 
+# Dart fix
+printf "\e[33;1m%s\e[0m\n" '=== Running Dart fix ==='
+dart fix --apply
+hasNewFilesFixed=$(git diff)
+if [ -n "$hasNewFilesFixed" ]; then
+	git add .
+	printf "\e[33;1m%s\e[0m\n" 'Dart fix files added to git stage'
+fi
+printf "\e[33;1m%s\e[0m\n" 'Finished running Dart fix'
+printf '%s\n' "${avar}"
+
 # Dart formatter
 printf "\e[33;1m%s\e[0m\n" '=== Running Dart formatter ==='
 dart format .
