@@ -20,8 +20,8 @@ if [ -n "$hasChanges" ]; then
 fi
 
 # Flutter import sorter
-printf "\e[33;1m%s\e[0m\n" '=== Running Flutter import sorter ==='
-flutter pub run import_sorter:main
+printf "\e[33;1m%s\e[0m\n" '=== Running Dart import sorter ==='
+dart run import_sorter:main
 hasNewFilesSorted=$(git diff)
 if [ -n "$hasNewFilesSorted" ]; then
 	git add .
@@ -30,20 +30,31 @@ fi
 printf "\e[33;1m%s\e[0m\n" 'Finished running Flutter import sorter'
 printf '%s\n' "${avar}"
 
-# Flutter formatter
-printf "\e[33;1m%s\e[0m\n" '=== Running Flutter formatter ==='
-flutter format .
+# Dart fix
+printf "\e[33;1m%s\e[0m\n" '=== Running Dart fix ==='
+dart fix --apply
+hasNewFilesFixed=$(git diff)
+if [ -n "$hasNewFilesFixed" ]; then
+	git add .
+	printf "\e[33;1m%s\e[0m\n" 'Dart fix files added to git stage'
+fi
+printf "\e[33;1m%s\e[0m\n" 'Finished running Dart fix'
+printf '%s\n' "${avar}"
+
+# Dart formatter
+printf "\e[33;1m%s\e[0m\n" '=== Running Dart formatter ==='
+dart format .
 
 hasNewFilesFormatted=$(git diff)
 if [ -n "$hasNewFilesFormatted" ]; then
 	git add .
 	printf "\e[33;1m%s\e[0m\n" 'Formatted files added to git stage'
 fi
-printf "\e[33;1m%s\e[0m\n" 'Finished running Flutter Formatter'
+printf "\e[33;1m%s\e[0m\n" 'Finished running Dart Formatter'
 printf '%s\n' "${avar}"
 
 # Flutter Analyzer
-printf "\e[33;1m%s\e[0m\n" '=== Running Flutter analyzer'
+printf "\e[33;1m%s\e[0m\n" '=== Running Flutter analyzer ==='
 flutter analyze
 
 if [ $? -ne 0 ]; then
@@ -54,6 +65,7 @@ fi
 
 printf "\e[33;1m%s\e[0m\n" 'Finished running Flutter analyzer'
 printf '%s\n' "${avar}"
+
 
 # Unit tests
 printf "\e[33;1m%s\e[0m\n" '=== Running Unit Tests ==='
